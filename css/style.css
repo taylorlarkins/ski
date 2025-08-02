@@ -24,7 +24,7 @@ body {
 main {
   flex: 1; /* pushes footer down when content is short */
   padding: 1rem;
-  max-width: 900px;
+  width: 768px;
   margin: 0 auto;
 }
 
@@ -125,5 +125,10 @@ footer {
 
   .menu-toggle {
     display: block;
+  }
+  
+  main {
+    width: 100%; /* full width on mobile */
+    padding: 1rem;
   }
 }
