@@ -1,0 +1,129 @@
+/* ===== Reset & Global Box Sizing ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Main Content ===== */
+main {
+  flex: 1; /* pushes footer down when content is short */
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 90px; /* space for fixed header */
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: #004d66;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;   /* prevent overflow */
+  overflow-x: hidden; /* prevent nav overflow */
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== Run Styles ===== */
+.run {
+  font-weight: bold;
+}
+
+.run.blue {
+  color: #0074cc;
+}
+
+.run.black {
+  color: black;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004d66;
+  color: white;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #004d66;
+    position: fixed;   /* instead of absolute */
+    top: 60px;         /* directly below header */
+    right: 0;
+    padding: 1rem;
+    width: 200px;
+    max-width: 100vw;
+    height: auto;      /* no scroll bar */
+    z-index: 999;      /* above main content */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
