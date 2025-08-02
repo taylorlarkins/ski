@@ -20,6 +20,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+p {
+  line-height: 1.5;
+}
+
 /* ===== Main Content ===== */
 main {
   flex: 1; /* pushes footer down when content is short */
@@ -82,19 +86,6 @@ main {
   cursor: pointer;
 }
 
-/* ===== Run Styles ===== */
-.run {
-  font-weight: bold;
-}
-
-.run.blue {
-  color: #0074cc;
-}
-
-.run.black {
-  color: black;
-}
-
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -102,6 +93,73 @@ footer {
   background: #004d66;
   color: white;
 }
+
+/* ===== Run & Lift Styles ===== */
+.run {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.run.green {
+  background-image: url('assets/green.svg');
+  background-size: 15px 15px;
+  color: #008000;
+}
+
+.run.blue {
+  background-image: url('assets/blue.svg');
+  background-size: 15px 15px;
+  color: #2673E2;
+}
+
+.run.black {
+  background-image: url('assets/black.svg');
+  background-size: 15px 15px;
+}
+
+.run.double {
+  background-image: url('assets/double.svg');
+  background-size: 15px 15px;
+}
+
+.lift {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.lift.four {
+  background-image: url('assets/four.svg');
+  background-size: 27px 27px;
+}
+
+.lift.three {
+  background-image: url('assets/three.svg');
+  background-size: 25px 25px;
+}
+
+.park {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url('assets/park.svg');
+  background-size: 15px 15px;
+  color: orange;
+}
+
 
 /* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
